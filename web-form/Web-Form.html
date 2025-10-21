@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Üyelik Formu</title>
+
+    <style>
+        input[type="submit"] {
+            background-color:#cedede ;
+        }
+        input[type="reset"] {
+            background-color:#cedede ;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="test1.html">
+        <h1>Lütfen Formu Eksiksiz Doldurunuz</h1>
+        <fieldset>
+            <legend>Kişisel Bilgileriniz</legend>
+            <label for="isim">Ad:</label> <br>
+            <input type="text" name="isim" id="isim" placeholder="Ad" required><br><br>
+    
+            <label for="soyisim">Soyad:</label><br>
+            <input type="text" name="soyisim" id="soyisim" placeholder="Soyad" required><br><br>
+            
+            <label for="mail">E-mail:</label><br>
+            <input type="email" name="mail" id="mail" placeholder="E-mail" required><br><br>
+            
+            <label for="sifre">Şifre:</label><br>
+            <input type="password" name="sifre" id="sifre" placeholder="Şifre" required><br><br>
+            <label for="tarih">Tarih:</label><br>
+            <input type="datetime-local" name="tarih" id="tarih">
+
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Yaşınız</legend>
+            <label for="yas">Yaş Aralığınızı Seçiniz</label><br>
+            <input type="radio" name="yas" id="0-18">
+            <label for="yas">0-18</label><br>
+            <input type="radio" name="yas" id="18-25">
+            <label for="yas">18-25</label><br>
+            <input type="radio" name="yas" id="25-65">
+            <label for="yas">25-65</label>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Şehir</legend>
+            <select name="" id="">
+                <option value="">Ankara</option>
+                <option value="">İstanbul</option>
+                <option value="">Kayseri</option>
+                <option value="">Ordu</option>
+            </select>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Hobileriniz</legend>
+            <input type="checkbox" name="hobi" id="hobi">
+            <label for="hobi">Oyun</label><br>
+            <input type="checkbox" name="hobi" id="hobi">
+            <label for="hobi">Film</label><br>
+            <input type="checkbox" name="hobi" id="hobi">
+            <label for="hobi">Müzik</label><br>
+            <input type="checkbox" name="hobi" id="hobi">
+            <label for="hobi">Seyahat</label>
+
+        </fieldset>
+        <br>
+
+        <input type="reset">
+        <input type="submit">
+    </form>
+</body>
+</html>
