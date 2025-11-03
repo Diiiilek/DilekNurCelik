@@ -1,0 +1,28 @@
+table{
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    color:#5c0a0a ;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+h3{
+    color: #5c0a0a;
+}
+
+th, td {
+    border: 2px, solid #818181dd;
+    padding: 15px;
+    text-align: left;
+
+}
+
+th{
+    background-color: rgb(100, 145, 187);
+    color: white;
+}
