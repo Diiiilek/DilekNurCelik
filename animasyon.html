@@ -4,81 +4,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab Görevi 1</title>
+    <title>Animasyonlu Yüzler</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             display: flex;
             justify-content: space-around;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            background-color: #bbbab8;
+            background-color: #c0aadb;
         }
-
         .circle {
             width: 200px;
             height: 200px;
-            border-radius: 50%;
-            background-color: #4987b9;
+            background-color: #4d5fc9;
+            margin: 10px;
             display: inline-block;
+            position: relative;
+            border-radius: 10%;
+            text-align: center;
         }
 
        
-        .up-down {
-            animation: upDown 2s infinite alternate;
+        .circle::before, .circle::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 30px;
+        }
+       
+        .circle::before {
+            left: 60px;
+        }
+        
+        .circle::after {
+            right: 60px;
         }
 
-        @keyframes upDown {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-150px); }
+        
+        .circle .mouth {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            width: 80px;
+            height: 40px;
+            background-color: black;
+            border-radius: 0 0 40px 40px;
+            transform: translateX(-50%);
+        }
+
+        
+        .move-up-down {
+            animation: moveUpDown 3s infinite alternate;
+        }
+
+        @keyframes moveUpDown {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(50px); }
         }
 
         
         .grow-shrink {
-            animation: growShrink 2s infinite alternate;
+            animation: growShrink 3s infinite alternate;
         }
 
         @keyframes growShrink {
-            0% { transform: scale(1); background-color: #4987b9; }
-            100% { transform: scale(1.5); background-color: #963491; }
+            0% { transform: scale(1); background-color: #255474; }
+            50% { transform: scale(1); background-color: #31023a; }
+            100% { transform: scale(1.5); background-color: #792f73; }
         }
 
-        
+       
         .fade-in-out {
-            animation: fadeInOut 2s infinite alternate;
+            animation: fadeInOut 3s infinite alternate;
         }
 
         @keyframes fadeInOut {
             0% { opacity: 1; }
-            100% { opacity: 0; }
+            100% { opacity: 0.2; }
         }
 
-      
-        .left-right {
-            animation: leftRight 2s infinite alternate;
+       
+        .move-left-right {
+            animation: moveLeftRight 3s infinite alternate;
         }
 
-        @keyframes leftRight {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(100px); }
+        @keyframes moveLeftRight {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(50px); }
         }
 
-  
+       
         .rotate {
-            animation: rotation 2s infinite linear;
+            animation: rotate 3s infinite linear;
         }
 
-        @keyframes rotation {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
-    <div class="circle up-down"></div>
-    <div class="circle grow-shrink"></div>
-    <div class="circle fade-in-out"></div>
-    <div class="circle left-right"></div>
-    <div class="circle rotate"></div>
+    <div class="circle move-up-down">
+        <div class="mouth"></div>
+    </div>
+    <div class="circle grow-shrink">
+        <div class="mouth"></div>
+    </div>
+    <div class="circle fade-in-out">
+        <div class="mouth"></div>
+    </div>
+    <div class="circle move-left-right">
+        <div class="mouth"></div>
+    </div>
+    <div class="circle rotate">
+        <div class="mouth"></div>
+    </div>
 </body>
 </html>
