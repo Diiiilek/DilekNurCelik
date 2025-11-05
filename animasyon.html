@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animasyonlu Yüzler</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            background-color: #c0aadb;
+        }
+        .circle {
+            width: 200px;
+            height: 200px;
+            background-color: #4d5fc9;
+            margin: 10px;
+            display: inline-block;
+            position: relative;
+            border-radius: 10%;
+            text-align: center;
+        }
+
+       
+        .circle::before, .circle::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 30px;
+        }
+       
+        .circle::before {
+            left: 60px;
+        }
+        
+        .circle::after {
+            right: 60px;
+        }
+
+        
+        .circle .mouth {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            width: 80px;
+            height: 40px;
+            background-color: black;
+            border-radius: 0 0 40px 40px;
+            transform: translateX(-50%);
+        }
+
+        
+        .move-up-down {
+            animation: moveUpDown 3s infinite alternate;
+        }
+
+        @keyframes moveUpDown {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(50px); }
+        }
+
+        
+        .grow-shrink {
+            animation: growShrink 3s infinite alternate;
+        }
+
+        @keyframes growShrink {
+            0% { transform: scale(1); background-color: #255474; }
+            50% { transform: scale(1); background-color: #31023a; }
+            100% { transform: scale(1.5); background-color: #792f73; }
+        }
+
+       
+        .fade-in-out {
+            animation: fadeInOut 3s infinite alternate;
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity: 1; }
+            100% { opacity: 0.2; }
+        }
+
+       
+        .move-left-right {
+            animation: moveLeftRight 3s infinite alternate;
+        }
+
+        @keyframes moveLeftRight {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(50px); }
+        }
+
+       
+        .rotate {
+            animation: rotate 3s infinite linear;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="circle move-up-down">
+        <div class="mouth"></div>
+    </div>
+    <div class="circle grow-shrink">
+        <div class="mouth"></div>
+    </div>
+    <div class="circle fade-in-out">
+        <div class="mouth"></div>
+    </div>
+    <div class="circle move-left-right">
+        <div class="mouth"></div>
+    </div>
+    <div class="circle rotate">
+        <div class="mouth"></div>
+    </div>
+</body>
+</html>
