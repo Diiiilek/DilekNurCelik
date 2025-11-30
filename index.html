@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ödevlerim</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background: radial-gradient(circle at top, #335b7c);
+        color: #fff;
+        padding: 50px 20px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 42px;
+        margin-bottom: 40px;
+        font-weight: 4000;
+        background: linear-gradient(90deg, #000000);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .grid {
+    display: grid;
+    grid-template-columns: 1fr;  
+    gap: 20px;
+    max-width: 500px;            
+    margin: auto;
+    }
+
+
+    /* TIKLANABİLİR KART STİLİ */
+    .card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(6px);
+        border-radius: 18px;
+        padding: 22px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+        transition: 0.2s ease;
+        text-decoration: none;   
+        color: white;             
+        display: block;           
+    }
+
+    .card:hover {
+        transform: translateY(-6px);
+        background: rgba(255, 255, 255, 0.10);
+    }
+
+    .card-title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 6px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .card-title span {
+        font-size: 22px;
+    }
+
+    .content {
+        color: #dcdcdc;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .card a {
+    color: #ffffff;          
+    text-decoration: none;   
+    font-weight: 500;
+}
+
+.card a:hover {
+    color: #ffbb5c;         
+    text-decoration: underline;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Ödevlerim</h1>
+
+<div class="grid">
+
+    <a href="Web-Form.html" class="card">
+        <div class="card-title"><span>✨</span>Form Ödevi</div>
+        <div class="content">Form Ödevi</div>
+    </a>
+
+    <div class="card">
+    <div class="card-title"><span>✨</span>Hafta5 Ödevleri</div>
+
+    <div class="content">
+        <a href="vennŞeması.html">Venn Şeması</a><br>
+        <a href="tablolar.html">Tablolar</a>
+    </div>
+    </div>
+
+
+    <div class="card">
+    <div class="card-title"><span>✨</span>Hafta7 Ödevleri</div>
+
+    <div class="content">
+        <a href="animasyon.html">Animasyonlu Yüzler</a><br>
+        <a href="">Div Hacettepe</a>
+    </div>
+    </div>
+
+
+    <a href="Kartlar.html" class="card">
+        <div class="card-title"><span>✨</span> Bilgi Kartları</div>
+        <div class="content">Kartlar</div>
+    </a>
+
+    <a href="lab2.html" class="card">
+        <div class="card-title"><span>✨</span> Göster-Gizle</div>
+        <div class="content">Göster-Gizle Karakter</div>
+    </a>
+
+    <div class="card">
+    <div class="card-title"><span>✨</span>Js Game</div>
+
+    <div class="content">
+        <a href="Sushi-Crush/sushi.html">Sushi-Crush</a><br>
+        <a href="candy-crush-master/candy-crush-master/index.html">Cand-Crush</a>
+    </div>
+    </div>
+
+   
+
+</div>
+
+</body>
+</html>
